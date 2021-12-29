@@ -19,4 +19,5 @@
 FROM openjdk:11
 VOLUME /tmp
 COPY target/*.jar app.jar
+RUN /bin/sleep 3600
 ENTRYPOINT ["java","-jar","/app.jar"]
