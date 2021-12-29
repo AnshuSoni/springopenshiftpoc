@@ -16,7 +16,7 @@
 #COPY --from=build ${DEPENDENCY}/META-INF /app/META-INF
 #COPY --from=build ${DEPENDENCY}/BOOT-INF/classes /app
 #ENTRYPOINT ["java","-cp","app:app/lib/*","com.capgemini.openshift.OpenshiftDemoApplication"]
-FROM openjdk:8-jdk-alpine
+FROM openjdk:11
 VOLUME /tmp
 COPY target/*.jar app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]
