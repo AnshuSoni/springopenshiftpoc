@@ -1,0 +1,3 @@
+com\capgemini\openshift\controller\DemoController.class
+com\capgemini\openshift\OpenshiftDemoApplication.class
+com\capgemini\openshift\models\Employee.class
