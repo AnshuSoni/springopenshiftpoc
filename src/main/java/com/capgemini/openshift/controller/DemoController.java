@@ -3,6 +3,7 @@ package com.capgemini.openshift.controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.capgemini.openshift.models.Car;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -25,5 +26,16 @@ public class DemoController {
 		emps.add(new Employee("Rajkumar", 22, 20000.0));
 		emps.add(new Employee("Iphone", 26, 40000.0));
 		return new ResponseEntity<List<Employee>>(emps, HttpStatus.OK);
+	}
+
+	@GetMapping(value = "cars")
+	public ResponseEntity<List<Car>> getCars(){
+		List<Car> cars = new ArrayList<>();
+		cars.add(new Car("Swift Dezire", "800 cc"));
+		cars.add(new Car("Polo Vento", "1200 cc"));
+		cars.add(new Car("Jeep Compass", "1400 cc"));
+		cars.add(new Car("Tata Harrier", "1800 cc"));
+		cars.add(new Car("Land Rovers", "2000 cc"));
+		return new ResponseEntity<>(cars, HttpStatus.OK);
 	}
 }	
