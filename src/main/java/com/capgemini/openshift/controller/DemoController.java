@@ -28,7 +28,7 @@ public class DemoController {
 		return new ResponseEntity<List<Employee>>(emps, HttpStatus.OK);
 	}
 
-	@GetMapping(value = "cars1")
+	@GetMapping(value = {"cars", "/", "car21", "/api/v1/cars24"})
 	public ResponseEntity<List<Car>> getCars(){
 		List<Car> cars = new ArrayList<>();
 		cars.add(new Car("Swift Dezire", "800 cc"));
@@ -37,5 +37,9 @@ public class DemoController {
 		cars.add(new Car("Tata Harrier", "1800 cc"));
 		cars.add(new Car("Land Rovers", "2000 cc"));
 		return new ResponseEntity<>(cars, HttpStatus.OK);
+	}
+	@GetMapping(value = {"name"})
+	public ResponseEntity<String> name(){
+		return new ResponseEntity<>("Rajnikant", HttpStatus.OK);
 	}
 }
