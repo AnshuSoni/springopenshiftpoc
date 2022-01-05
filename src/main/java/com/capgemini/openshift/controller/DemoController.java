@@ -18,15 +18,15 @@ import com.capgemini.openshift.models.Employee;
 @RequestMapping(value = "/api/v1")
 public class DemoController {
 
-	@GetMapping(value = "employees")
-	public ResponseEntity<List<Employee>> getEmployees(){
-		List<Employee> emps = new ArrayList<>();
-		emps.add(new Employee("Abhishek", 23, 30000.0));
-		emps.add(new Employee("Chandan", 24, 60000.0));
-		emps.add(new Employee("Rajkumar", 22, 20000.0));
-		emps.add(new Employee("Iphone", 26, 40000.0));
-		return new ResponseEntity<List<Employee>>(emps, HttpStatus.OK);
-	}
+//	@GetMapping(value = {"employees", "emps"})
+//	public ResponseEntity<List<Employee>> getEmployees(){
+//		List<Employee> emps = new ArrayList<>();
+//		emps.add(new Employee("Abhishek", 23, 30000.0));
+//		emps.add(new Employee("Chandan", 24, 60000.0));
+//		emps.add(new Employee("Rajkumar", 22, 20000.0));
+//		emps.add(new Employee("Iphone", 26, 40000.0));
+//		return new ResponseEntity<List<Employee>>(emps, HttpStatus.OK);
+//	}
 
 	@GetMapping(value = {"cars", "/", "car21", "/api/v1/cars24"})
 	public ResponseEntity<List<Car>> getCars(){
